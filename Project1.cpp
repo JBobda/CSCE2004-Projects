@@ -9,8 +9,8 @@ const float silverDensity = 10.5f; //grams per cubic centimeter (g/cm^3)
 const float steelDensity = 8.05f; //grams per cubic centimeter (g/cm^3)
 
 //Calculates the base to the power of its exponent
-int power(int base, int exponent){
-    int result = 1;
+float power(float base, float exponent){
+    float result = 1;
     for(int i = 0; i < exponent; i++){
         result *= base;
     }
