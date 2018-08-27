@@ -1,7 +1,8 @@
 #include <iostream>
+#include <cmath>
 
 //Pi Constant
-const float PI = 3.14159f;
+const float PI = M_PI;
 
 //Material Densities
 const float goldDensity = 19.32f; //grams per cubic centimeter (g/cm^3)
@@ -34,7 +35,7 @@ int main(){
     float smallSphereVolume = 0.f;
     float cylinderVolume = 0.f;
     float totalVolume = 0.f;
-    
+
 
     //Takes in user input to fill the values of the declared variables
     std::cout << "Enter the Radius of the big circle in cm: " << std::endl;
@@ -45,11 +46,11 @@ int main(){
     std::cin >> cylinderHeight;
 
     //Calculates the Areas of the Top
-    bigSphereArea = 4 * PI * power(bigSphereRad, 2);
-    smallSphereArea = (4 * PI * power(smallSphereRad, 2))/2;
-    cylinderArea = (2 * PI * cylinderHeight * smallSphereRad) 
-                 + (2 * PI * power(smallSphereRad, 2));
-    totalArea = bigSphereArea + smallSphereArea + cylinderArea;
+    bigSphereArea = 4.f * PI * power(bigSphereRad, 2.f);
+    smallSphereArea = (4.f * PI * power(smallSphereRad, 2.f))/2.f;
+    cylinderArea = (2.f * PI * cylinderHeight * smallSphereRad)
+                 + (2.f * PI * power(smallSphereRad, 2.f));
+    totalArea = bigSphereArea + smallSphereArea + cylinderArea - (4.f * (2.f * PI * power(smallSphereRad, 2.f)));
 
     //Calculates the Volumes of the Top
     bigSphereVolume = (4 * PI * power(bigSphereRad, 3))/3;
