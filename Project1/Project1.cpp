@@ -50,7 +50,8 @@ int main(){
     smallSphereArea = (4.f * PI * power(smallSphereRad, 2.f))/2.f;
     cylinderArea = (2.f * PI * cylinderHeight * smallSphereRad)
                  + (2.f * PI * power(smallSphereRad, 2.f));
-    totalArea = bigSphereArea + smallSphereArea + cylinderArea - (4.f * (2.f * PI * power(smallSphereRad, 2.f)));
+    totalArea = bigSphereArea + smallSphereArea + cylinderArea
+              - (4.f * (PI * power(smallSphereRad, 2.f)));
 
     //Calculates the Volumes of the Top
     bigSphereVolume = (4 * PI * power(bigSphereRad, 3))/3;
