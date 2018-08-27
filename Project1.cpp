@@ -8,7 +8,7 @@ const float goldDensity = 19.32f; //grams per cubic centimeter (g/cm^3)
 const float silverDensity = 10.5f; //grams per cubic centimeter (g/cm^3)
 const float steelDensity = 8.05f; //grams per cubic centimeter (g/cm^3)
 
-//Calculates the base to the power of its exponent
+//Self implemented Power function calculates the base to the power of its exponent
 float power(float base, float exponent){
     float result = 1;
     for(int i = 0; i < exponent; i++){
@@ -37,11 +37,11 @@ int main(){
     
 
     //Takes in user input to fill the values of the declared variables
-    std::cout << "Enter the Radius of the big circle: " << std::endl;
+    std::cout << "Enter the Radius of the big circle in cm: " << std::endl;
     std::cin >> bigSphereRad;
-    std::cout << "Enter the Radius of the small circle: " << std::endl;
+    std::cout << "Enter the Radius of the small circle in cm: " << std::endl;
     std::cin >> smallSphereRad;
-    std::cout << "Enter the Height of the cylinder: " << std::endl;
+    std::cout << "Enter the Height of the cylinder in cm: " << std::endl;
     std::cin >> cylinderHeight;
 
     //Calculates the Areas of the Top
