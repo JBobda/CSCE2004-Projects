@@ -2,8 +2,9 @@
 
 std::string caesarCipher(std::string input, int shift){
     for(size_t i = 0; i < input.length(); i++){
+        input[i] = toupper(input[i]);
         //In case they choose something outside of the alphabet
-        if(input[i] == ' ' || input[i] < 65) continue;
+        if((input[i] < 65 || input[0] > 90)) continue;
 
         //Adds the shift after making sure it doesn't exceed 25
         input[i] = input[i] + (shift % 25);
@@ -14,8 +15,9 @@ std::string caesarCipher(std::string input, int shift){
 
 std::string caesarDecipher(std::string input, int shift){
     for(size_t i = 0; i < input.length(); i++){
+        input[i] = toupper(input[i]);
         //In case they choose something outside of the alphabet
-        if(input[i] == ' ' || input[i] < 65) continue;
+        if((input[i] < 65 || input[0] > 90)) continue;
 
         //Adds the shift after making sure it doesn't exceed 25
         input[i] = input[i] - shift;
