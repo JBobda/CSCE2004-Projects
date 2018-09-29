@@ -1,5 +1,51 @@
 #include <iostream>
 
+//Function to check if user input is valid
+void validateInput(int& variable, std::string prompt){
+    while(std::cin.fail()){
+            std::cout << "Wrong input" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+            std::cout << prompt << std::endl;
+            std::cin >> variable;
+    }
+}
+
+//Recursive Caesar Cipher function
+std::string recursiveCaesarCipher(std::string input, int shift, size_t index){
+    if(index < input.length()){
+        input[index] = toupper(input[index]);
+        if(input[index] >= 'A' && input[index] <= 'Z'){
+            input[index] = input[index] - shift;
+
+            while(input[index] < 'A')
+                input[index] += 26;
+        }
+
+        return recursiveCaesarCipher(input, shift, index + 1);
+    }else{
+        return input;
+    }
+}
+
+//Recursive Caesar Decipher function
+std::string recursiveCaesarDecipher(std::string input, int shift, size_t index){
+    if(index < input.length()){
+        input[index] = toupper(input[index]);
+        if(input[index] >= 'A' && input[index] <= 'Z'){
+            input[index] += shift;
+
+            while(input[index] > 'Z')
+                input[index] -= 26;
+        }
+
+        return recursiveCaesarDecipher(input, shift, index + 1);
+    }else{
+        return input;
+    }
+}
+
+//Normal Caesar Cipher function
 std::string caesarCipher(std::string input, int shift){
     for(size_t i = 0; i < input.length(); i++){
         input[i] = toupper(input[i]);
@@ -15,6 +61,7 @@ std::string caesarCipher(std::string input, int shift){
     return input;
 }
 
+//Normal Caesar Decipher function
 std::string caesarDecipher(std::string input, int shift){
     for(size_t i = 0; i < input.length(); i++){
         input[i] = toupper(input[i]);
@@ -32,19 +79,23 @@ std::string caesarDecipher(std::string input, int shift){
     return input;
 }
 
+//Main menu function for the program
 void menu(std::string& userString, std::string& endString){
     int menuChoice = 0;
     int shift = 0;
+    std::string prompt = "Welcome to Caesars Cipher 2.0\n"
+                "1) Encode using classic algorithm\n"
+                "2) Decode using classic algorithm\n"
+                "3) Encode using improved algorithm\n"
+                "4) Decode using improved algorithm\n"
+                "5) Exit the program\n";
+
     while(true){
-        std::cout << "Welcome to Caesars Cipher 2.0\n"
-                << "1) Encode using classic algorithm\n"
-                << "2) Decode using classic algorithm\n"
-                << "3) Encode using improved algorithm\n"
-                << "4) Decode using improved algorithm\n"
-                << "5) Exit the program\n";
+        std::cout << prompt;
 
         //Takes in the user's menu choice, if it is invalid or option 5, the program exits
         std::cin >> menuChoice;
+        validateInput(menuChoice, prompt);
         if(menuChoice == 5){
             return;
         }
@@ -52,6 +103,7 @@ void menu(std::string& userString, std::string& endString){
         //Prompts the user for a shift value
         std::cout << "Enter a shift value: " << std::endl;
         std::cin >> shift;
+        validateInput(shift, "Enter a shift value: ");
 
         switch(menuChoice){
             case 1:
@@ -59,14 +111,14 @@ void menu(std::string& userString, std::string& endString){
                 std::cout << "Please enter a string you would like to encrypt: " << std::endl;
                 std::cin.ignore(1000, '\n');
                 std::getline(std::cin, userString);
-                endString = caesarCipher(userString, shift);
+                endString = recursiveCaesarCipher(userString, shift, 0);
                 break;
             case 2:
                 //Taking user input and then passing it into the caesar decipher function
                 std::cout << "Please enter a string you would like to decrypt: " << std::endl;
-                std::cin.ignore(1000, '\n');
+                std::cin.ignore();
                 std::getline(std::cin, userString);
-                endString = caesarDecipher(userString, shift);
+                endString = recursiveCaesarDecipher(userString, shift, 0);
                 break;
             case 3:
                 break;
@@ -85,7 +137,6 @@ int main(){
     //Decleration of Variables
     std::string userString = "";
     std::string encryptedString = "";
-    std::string decryptedString = "";
 
     menu(userString, encryptedString);
     return 0;
