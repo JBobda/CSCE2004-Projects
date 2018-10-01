@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 //Function to check if user input is valid
 void validateInput(int& variable, std::string prompt){
@@ -11,13 +12,51 @@ void validateInput(int& variable, std::string prompt){
     }
 }
 
+std::string specialCipher(std::string input, int shift, size_t index){
+    if(index < input.length()){
+        input[index] = toupper(input[index]);
+        //In case they choose something outside of the alphabet
+        if(input[index] >= 'A' && input[index] <= 'Z'){
+            input[index] = input[index] - shift;
+            //Makes sure that the shift doesn't push the value out of the alphabet
+            while(input[index] < 'A')
+                input[index] += 26;
+        }
+        //Changes the shift value after every encryption
+        shift =  (shift + (2 * shift)) % 25;
+        return specialCipher(input, shift, index + 1);
+    }else{
+        return input;
+    }
+}
+
+std::string specialDecipher(std::string input, int shift, size_t index){
+    if(index < input.length()){
+        input[index] = toupper(input[index]);
+        if(input[index] >= 'A' && input[index] <= 'Z'){
+            //Standard Caesar Decipher portion here
+            input[index] += shift;
+            
+            while(input[index] > 'Z')
+                input[index] -= 26;
+        }
+        //Changes the shift value after every decryption
+        shift =  (shift + (2 * shift)) % 25;
+        return specialDecipher(input, shift, index + 1);
+    }else{
+        return input;
+    }
+}
+
 //Recursive Caesar Cipher function
 std::string recursiveCaesarCipher(std::string input, int shift, size_t index){
     if(index < input.length()){
         input[index] = toupper(input[index]);
+        //In case they choose something outside of the alphabet
         if(input[index] >= 'A' && input[index] <= 'Z'){
             input[index] = input[index] - shift;
 
+            //Makes sure that the shift doesn't push the value out of the alphabet
             while(input[index] < 'A')
                 input[index] += 26;
         }
@@ -52,7 +91,7 @@ std::string caesarCipher(std::string input, int shift){
         //In case they choose something outside of the alphabet
         if((input[i] < 65 || input[0] > 90)) continue;
 
-        //Adds the shift after making sure it doesn't exceed 25
+        //Adds the shift 
         input[i] = input[i] - shift;
         while(input[i] < 'A')
             input[i] += 26;
@@ -84,11 +123,11 @@ void menu(std::string& userString, std::string& endString){
     int menuChoice = 0;
     int shift = 0;
     std::string prompt = "Welcome to Caesars Cipher 2.0\n"
-                "1) Encode using classic algorithm\n"
-                "2) Decode using classic algorithm\n"
-                "3) Encode using improved algorithm\n"
-                "4) Decode using improved algorithm\n"
-                "5) Exit the program\n";
+                         "1) Encode using classic algorithm\n"
+                         "2) Decode using classic algorithm\n"
+                         "3) Encode using improved algorithm\n"
+                         "4) Decode using improved algorithm\n"
+                         "5) Exit the program\n";
 
     while(true){
         std::cout << prompt;
@@ -116,13 +155,23 @@ void menu(std::string& userString, std::string& endString){
             case 2:
                 //Taking user input and then passing it into the caesar decipher function
                 std::cout << "Please enter a string you would like to decrypt: " << std::endl;
-                std::cin.ignore();
+                std::cin.ignore(1000, '\n');
                 std::getline(std::cin, userString);
                 endString = recursiveCaesarDecipher(userString, shift, 0);
                 break;
             case 3:
+                //Taking user input and then passing it into the special cipher function
+                std::cout << "Please enter a string you would like to encrypt: " << std::endl;
+                std::cin.ignore(1000, '\n');
+                std::getline(std::cin, userString);
+                endString = specialCipher(userString, shift, 0);
                 break;
             case 4:
+                //Taking user input and then passing it into the special decipher function
+                std::cout << "Please enter a string you would like to decrypt: " << std::endl;
+                std::cin.ignore(1000, '\n');
+                std::getline(std::cin, userString);
+                endString = specialDecipher(userString, shift, 0);
                 break;
             default:
                 std::cout << "Menu choice was invalid." << std::endl;
