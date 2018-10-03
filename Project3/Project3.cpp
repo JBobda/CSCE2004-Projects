@@ -130,6 +130,8 @@ void menu(std::string& userString, std::string& endString){
                          "5) Exit the program\n";
 
     while(true){
+        menuChoice = 0;
+        shift = 0;
         std::cout << prompt;
 
         //Takes in the user's menu choice, if it is invalid or option 5, the program exits
@@ -137,12 +139,17 @@ void menu(std::string& userString, std::string& endString){
         validateInput(menuChoice, prompt);
         if(menuChoice == 5){
             return;
+        }else if(menuChoice >5 || menuChoice < 1){
+            std::cout << "Menu choice was invalid." << std::endl;
+            continue;
         }
 
         //Prompts the user for a shift value
-        std::cout << "Enter a shift value: " << std::endl;
-        std::cin >> shift;
-        validateInput(shift, "Enter a shift value: ");
+        while(shift > 25 || shift < 1){
+            std::cout << "Enter a shift value: " << std::endl;
+            std::cin >> shift;
+            validateInput(shift, "Enter a shift value: ");
+        }
 
         switch(menuChoice){
             case 1:
