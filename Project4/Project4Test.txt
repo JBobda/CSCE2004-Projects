@@ -1,0 +1,204 @@
+
+------------------------------------------------------------
+
+You just summitted the Kosciuszko Mountain(Highest point in Australia)
+
+You found it is harder to spell Mt kosciuszko than it is to climb it)
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 3 L water
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 2 food points
+
+Health: 102 water: 53
+
+What direction would you like to go (N,S,E,W): W
+
+------------------------------------------------------------
+
+You just summitted the Denali Mountain(North American)
+
+It's unbelievably cold and is used as a training ground for the Himalayas)
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 8 L water
+
+Health: 102 water: 61
+
+What direction would you like to go (N,S,E,W): S
+
+That's not an option from this Mountain!
+
+What direction would you like to go (N,S,E,W): E
+
+------------------------------------------------------------
+
+You just summitted the Kosciuszko Mountain(Highest point in Australia)
+
+You found it is harder to spell Mt kosciuszko than it is to climb it)
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 4 L water
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 13 food points
+
+Health: 115 water: 65
+
+What direction would you like to go (N,S,E,W): W
+
+------------------------------------------------------------
+
+You just summitted the Denali Mountain(North American)
+
+It's unbelievably cold and is used as a training ground for the Himalayas)
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 4 L water
+
+Health: 115 water: 69
+
+What direction would you like to go (N,S,E,W): W
+
+------------------------------------------------------------
+
+You just summitted the Aconcagua Mountain(Highest Mountain outside of the Himalayas)
+
+The peak rises almost 7000m into the air
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 3 L water
+
+Health: 115 water: 72
+
+What direction would you like to go (N,S,E,W): S
+
+That's not an option from this Mountain!
+
+What direction would you like to go (N,S,E,W): N
+
+------------------------------------------------------------
+
+You just summitted the Everest Mountain(Highest Mountain in the world)
+
+No other mountain is so instantly recognizably or has such a history surrounding it)
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 12 food points
+
+Health: 127 water: 72
+
+What direction would you like to go (N,S,E,W): N
+
+------------------------------------------------------------
+
+You just summitted the Mount Godwin-Austen
+
+Mount Godwin-Austen or Chhogori, has a summit 8,611 metres above sea level.It is located on the border between China and Pakistan.
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 4 L water
+Do you want to pick this airdropping package up? (yes/no)
+no
+You lost -17 food points
+
+Health: 110 water: 76
+
+What direction would you like to go (N,S,E,W): N
+
+That's not an option from this Mountain!
+
+What direction would you like to go (N,S,E,W): W
+
+That's not an option from this Mountain!
+
+What direction would you like to go (N,S,E,W): E
+
+------------------------------------------------------------
+
+You just summitted the Lhotse
+
+Lhotse, elevation - 8,516 metres, is the fourth highest mountain in the world.
+Do you want to pick this bottled water up? (yes/no)
+no
+Too bad, you need around 4-5 liters of water at altitude to feel great
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 15 food points
+
+Health: 125 water: 76
+
+What direction would you like to go (N,S,E,W): E
+
+------------------------------------------------------------
+
+You just summitted the Makalu
+
+Makalu is notable for its summit's iconic pyramid shape.
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 10 food points
+
+Health: 135 water: 76
+
+What direction would you like to go (N,S,E,W): E
+
+That's not an option from this Mountain!
+
+What direction would you like to go (N,S,E,W): W
+
+------------------------------------------------------------
+
+You just summitted the Lhotse
+
+Lhotse, elevation - 8,516 metres, is the fourth highest mountain in the world.
+Do you want to pick this bottled water up? (yes/no)
+yes
+You found 19 L water
+Do you want to pick this airdropping package up? (yes/no)
+no
+You lost -11 food points
+
+Health: 124 water: 95
+
+What direction would you like to go (N,S,E,W): E
+
+------------------------------------------------------------
+
+You just summitted the Makalu
+
+Makalu is notable for its summit's iconic pyramid shape.
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 47 food points
+
+Health: 171 water: 95
+
+What direction would you like to go (N,S,E,W): S
+
+------------------------------------------------------------
+
+You just summitted the Nanga Parbat
+
+Nanga Parbat is a notoriously dangerous hill to climb, and has been labelled the 'Killer Mountain'
+Do you want to pick this bottled water up? (yes/no)
+no
+Too bad, you need around 4-5 liters of water at altitude to feel great
+Do you want to pick this airdropping package up? (yes/no)
+yes
+Congratulations, you gained 3 food points
+
+Health: 174 water: 95
+
+What direction would you like to go (N,S,E,W): E
+
+------------------------------------------------------------
+
+You have already finished the summits challenge
+I hope you enjoyed this trip
+You got
+
+Water: 95 Food: 174
+
+Great job.  You get a ticket to the Vinson Massif Mountain(Located in Antarctica)
