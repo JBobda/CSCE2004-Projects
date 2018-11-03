@@ -1,0 +1,40 @@
+Normal Case
+
+Welcome to the Uber Snack ordering system!
+Enter customer name (or 'exit'): Jan
+We have the following snacks for sale:
+Name         Price 
+Snickers     $1.50  
+Chips        $2.00  
+Skittles     $1.00  
+Coke         $0.99  
+Fanta        $0.99  
+Sprite       $0.99  
+Hershey's    $1.50  
+Popcorn      $3.00  
+Doritos      $2.00  
+Mountain_Dew $0.99  
+Enter name of snack (or 'pay'): Chips
+How many do you want? 10
+Enter name of snack (or 'pay'): Fanta
+How many do you want? 2
+Enter name of snack (or 'pay'): Popcorn
+How many do you want? 1
+Enter name of snack (or 'pay'): pay
+Jan your order costs $24.98
+Thank you for shopping at Uber Snacks
+Enter customer name (or 'exit'): exit
+The snack inventory contains:
+Name         Quantity 
+Snickers     12    
+Chips        90    
+Skittles     64    
+Coke         59    
+Fanta        68    
+Sprite       12    
+Hershey's    64    
+Popcorn      70    
+Doritos      78    
+Mountain_Dew 76    
+
+

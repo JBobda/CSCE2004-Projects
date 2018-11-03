@@ -38,9 +38,6 @@ void chooseSnack(std::string& customerChoice, std::string& customerName, float& 
             break;
         }
 
-        std::cout << "How many do you want? ";
-        std::cin >> amount;
-
         //Loop through possible items and find index of matching one
         int matchingItemIndex = findMatchingItem(itemNames, SIZE, customerChoice);
 
@@ -49,6 +46,9 @@ void chooseSnack(std::string& customerChoice, std::string& customerName, float& 
             std::cout << "This item is either out of stock, or was never available.\n";
             continue;
         }
+
+        std::cout << "How many do you want? ";
+        std::cin >> amount;
 
         //If the amount is too great, reprompt the user
         while(amount < 0){
