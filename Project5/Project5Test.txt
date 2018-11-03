@@ -38,3 +38,117 @@ Doritos      78
 Mountain_Dew 76    
 
 
+Invalid Snack Name
+
+Welcome to the Uber Snack ordering system!
+Enter customer name (or 'exit'): Jan
+We have the following snacks for sale:
+Name         Price 
+Snickers     $1.50  
+Chips        $2.00  
+Skittles     $1.00  
+Coke         $0.99  
+Fanta        $0.99  
+Sprite       $0.99  
+Hershey's    $1.50  
+Popcorn      $3.00  
+Doritos      $2.00  
+Mountain_Dew $0.99  
+Enter name of snack (or 'pay'): Tostitos
+This item is either out of stock, or was never available.
+Enter name of snack (or 'pay'): pay
+Jan your order costs $0.00
+Thank you for shopping at Uber Snacks
+Enter customer name (or 'exit'): exit
+The snack inventory contains:
+Name         Quantity 
+Snickers     61    
+Chips        75    
+Skittles     74    
+Coke         39    
+Fanta        90    
+Sprite       43    
+Hershey's    95    
+Popcorn      87    
+Doritos      79    
+Mountain_Dew 62   
+
+
+Negative Quantity for Snack
+
+Welcome to the Uber Snack ordering system!
+Enter customer name (or 'exit'): Jan
+We have the following snacks for sale:
+Name         Price 
+Snickers     $1.50  
+Chips        $2.00  
+Skittles     $1.00  
+Coke         $0.99  
+Fanta        $0.99  
+Sprite       $0.99  
+Hershey's    $1.50  
+Popcorn      $3.00  
+Doritos      $2.00  
+Mountain_Dew $0.99  
+Enter name of snack (or 'pay'): Snickers
+How many do you want? -1
+Please enter a positive amount: -1
+Please enter a positive amount: 5
+Enter name of snack (or 'pay'): pay
+Jan your order costs $7.50
+Thank you for shopping at Uber Snacks
+Enter customer name (or 'exit'): exit
+The snack inventory contains:
+Name         Quantity 
+Snickers     39    
+Chips        23    
+Skittles     35    
+Coke         77    
+Fanta        80    
+Sprite       89    
+Hershey's    25    
+Popcorn      48    
+Doritos      60    
+Mountain_Dew 25    
+
+
+Chosen Quantity is greater than available amount
+
+Welcome to the Uber Snack ordering system!
+Enter customer name (or 'exit'): Jan
+We have the following snacks for sale:
+Name         Price 
+Snickers     $1.50  
+Chips        $2.00  
+Skittles     $1.00  
+Coke         $0.99  
+Fanta        $0.99  
+Sprite       $0.99  
+Hershey's    $1.50  
+Popcorn      $3.00  
+Doritos      $2.00  
+Mountain_Dew $0.99  
+Enter name of snack (or 'pay'): Sprite
+How many do you want? 500
+That is an invalid quantity!
+There are 33 of Sprite available
+35
+That is an invalid quantity!
+There are 33 of Sprite available
+33
+Enter name of snack (or 'pay'): pay
+Jan your order costs $32.67
+Thank you for shopping at Uber Snacks
+Enter customer name (or 'exit'): exit
+The snack inventory contains:
+Name         Quantity 
+Snickers     79    
+Chips        11    
+Skittles     97    
+Coke         26    
+Fanta        79    
+Sprite       0     
+Hershey's    49    
+Popcorn      38    
+Doritos      26    
+Mountain_Dew 64 
