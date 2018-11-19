@@ -20,6 +20,11 @@ Monster::Monster(std::string name, int health, int strength, int defense, int sp
 }
 Monster::Monster(Monster& monster){
     srand(time(NULL));
+    this->name = monster.name;
+    this->health = monster.health;
+    this->strength = monster.strength;
+    this->defense = monster.defense;
+    this->speed = monster.speed;
 }
 Monster::~Monster(){}
 
@@ -28,21 +33,37 @@ void Monster::attack(Monster& monster){
     int dodgeSpeed = rand() % monster.getSpeed() + 1;
     int attackPower = rand() % strength + 1;
 
+    std::cout << "\t" << name << " attacks " << monster.getName() << " with " << attackPower << " power.\n";
+
     //No damage is done
-    if(dodgeSpeed > attackSpeed) return;
+    if(dodgeSpeed > attackSpeed){ 
+        std::cout << "\t" << monster.getName() << " has dodged the attack!\n";
+        return;
+    }
 
     //How much damage is done to monster 2 after applying defense
     int damageDone = attackPower - monster.getDefense();
 
     //Subtract the damage done from the monster 2
-    if(damageDone > 0)
+    if(damageDone > 0){
         monster.setHealth(monster.getHealth() - damageDone);
+        std::cout << "\t" << monster.getName() << " took " << damageDone << " and now has " << monster.getHealth() << " health.\n";
+    }else{
+        std::cout << "\t" << monster.getName() << " blocked all of the damage.\n";
+    }
 
     //If monster 2's health is 0 then it is dead
-    if(monster.getHealth() <= 0)
-        std::cout << monster.getName() << " is dead" << std::endl;
+    if(monster.getHealth() <= 0){
+        std::cout << "\t" << monster.getName() << " has been defeated." << std::endl;
+    }
 }
-void Monster::print(){}
+void Monster::print(){
+    std::cout << name << "\n"
+              << health << "\n"
+              << strength << "\n"
+              << defense << "\n"
+              << speed << "\n";
+}
 
 //Getter Methods
 std::string Monster::getName(){
