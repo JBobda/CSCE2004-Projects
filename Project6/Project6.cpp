@@ -3,6 +3,7 @@
 #include "monster.h"
 
 int main(){
+    //Initializing ifstream object, opening monsters.txt and creating a monster array as specified
     std::ifstream reader;
     reader.open("monsters.txt");
     int count = 0;
@@ -10,11 +11,12 @@ int main(){
     Monster monsters[count];
 
     std::string name = "";
-    int health = 0;
     int strength = 0;
+    int health = 0;
     int defense = 0;
     int speed = 0;
 
+    //Loading up and printing all of the monsters in the text file
     for(int i = 0; i < count; i++){
         reader >> name;
         reader >> strength;
@@ -26,6 +28,7 @@ int main(){
         monsters[i].print();
     }
 
+    //Asking the user to select the monsters to battle
     int firstMonster = 0;
     int secondMonster = 0;
     std::cout << "Choose first monster for battle [0.." << (count-1) << "]:"; 
