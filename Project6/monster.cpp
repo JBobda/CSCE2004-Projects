@@ -5,24 +5,24 @@
 Monster::Monster(){
     srand(time(NULL));
     name = "Orc";
-    health = 100;
     strength = 50;
+    health = 100;
     defense = 100;
     speed = 20;
 }
-Monster::Monster(std::string name, int health, int strength, int defense, int speed){
+Monster::Monster(std::string name, int strength, int health, int defense, int speed){
     srand(time(NULL));
     this->name = name;
-    this->health = health;
     this->strength = strength;
+    this->health = health;
     this->defense = defense;
     this->speed = speed;
 }
 Monster::Monster(Monster& monster){
     srand(time(NULL));
     this->name = monster.name;
-    this->health = monster.health;
     this->strength = monster.strength;
+    this->health = monster.health;
     this->defense = monster.defense;
     this->speed = monster.speed;
 }
@@ -42,12 +42,16 @@ void Monster::attack(Monster& monster){
     }
 
     //How much damage is done to monster 2 after applying defense
-    int damageDone = attackPower - monster.getDefense();
+    //Calculates damage deflected and then subtracts that from the attackPower
+    int damageDone = attackPower - (attackPower * (monster.getDefense()/100.0));
 
     //Subtract the damage done from the monster 2
     if(damageDone > 0){
         monster.setHealth(monster.getHealth() - damageDone);
-        std::cout << "\t" << monster.getName() << " took " << damageDone << " and now has " << monster.getHealth() << " health.\n";
+        if(monster.getHealth() > 0)
+            std::cout << "\t" << monster.getName() << " took " << damageDone << " and now has " << monster.getHealth() << " health.\n";
+        else
+            std::cout << "\t" << monster.getName() << " took " << damageDone << " and now has " << 0 << " health.\n";
     }else{
         std::cout << "\t" << monster.getName() << " blocked all of the damage.\n";
     }
@@ -58,22 +62,22 @@ void Monster::attack(Monster& monster){
     }
 }
 void Monster::print(){
-    std::cout << name << "\n"
-              << health << "\n"
-              << strength << "\n"
-              << defense << "\n"
-              << speed << "\n";
+    std::cout << "Name: " << name << "\n"
+              << "Strength: " << strength << "\n"
+              << "Health: " << health << "\n"
+              << "Defense: " << defense << "\n"
+              << "Speed: " << speed << "\n\n";
 }
 
 //Getter Methods
 std::string Monster::getName(){
     return name;
 }
-int Monster::getHealth(){
-    return health;
-}
 int Monster::getStrength(){
     return strength;
+}
+int Monster::getHealth(){
+    return health;
 }
 int Monster::getDefense(){
     return defense;
@@ -86,11 +90,11 @@ int Monster::getSpeed(){
 void Monster::setName(std::string name){
     this->name = name;
 }
-void Monster::setHealth(int health){
-    this->health = health;
-}
 void Monster::setStrength(int strength){
     this->strength = strength;
+}
+void Monster::setHealth(int health){
+    this->health = health;
 }
 void Monster::setDefense(int defense){
     this->defense = defense;

@@ -17,11 +17,11 @@ int main(){
 
     for(int i = 0; i < count; i++){
         reader >> name;
-        reader >> health;
         reader >> strength;
+        reader >> health;
         reader >> defense;
         reader >> speed;
-        Monster monster(name, health, strength, defense, speed);
+        Monster monster(name, strength, health, defense, speed);
         monsters[i] = monster;
         monsters[i].print();
     }

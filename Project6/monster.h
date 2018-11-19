@@ -3,8 +3,8 @@
 class Monster{
     private:
         std::string name;
-        int health;
         int strength;
+        int health;
         int defense;
         int speed;
 
@@ -15,7 +15,7 @@ class Monster{
     public:
         //Constructors
         Monster();
-        Monster(std::string name, int health, int strength, int defense, int speed);
+        Monster(std::string name, int strength, int health, int defense, int speed);
         Monster(Monster& monster);
         ~Monster();
 
@@ -24,15 +24,15 @@ class Monster{
 
         //Getter Methods
         std::string getName();
-        int getHealth();
         int getStrength();
+        int getHealth();
         int getDefense();
         int getSpeed();
 
         //Setter Methods
         void setName(std::string name);
-        void setHealth(int health);
         void setStrength(int strength);
+        void setHealth(int health);
         void setDefense(int defense);
         void setSpeed(int speed);
 };
