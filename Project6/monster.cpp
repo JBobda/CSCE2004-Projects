@@ -1,6 +1,13 @@
 #include "monster.h"
 #include <cstdlib>
 
+int clamp(int num, int min, int max){
+    if(num > max) num = max;
+    if(num < min) num = min;
+
+    return num;
+}
+
 //Constructors
 Monster::Monster(){
     srand(time(NULL));
@@ -13,10 +20,10 @@ Monster::Monster(){
 Monster::Monster(std::string name, int strength, int health, int defense, int speed){
     srand(time(NULL));
     this->name = name;
-    this->strength = strength;
-    this->health = health;
-    this->defense = defense;
-    this->speed = speed;
+    this->strength = clamp(strength, 0, MAX_STRENGTH);
+    this->health = clamp(health, 0, MAX_HEALTH);
+    this->defense = clamp(defense, 0, MAX_DEFENSE);
+    this->speed = clamp(speed, 0, MAX_SPEED);
 }
 Monster::Monster(Monster& monster){
     srand(time(NULL));
@@ -91,14 +98,14 @@ void Monster::setName(std::string name){
     this->name = name;
 }
 void Monster::setStrength(int strength){
-    this->strength = strength;
+    this->strength = clamp(strength, 0, MAX_STRENGTH);
 }
 void Monster::setHealth(int health){
-    this->health = health;
+    this->health = clamp(health, 0, MAX_HEALTH);
 }
 void Monster::setDefense(int defense){
-    this->defense = defense;
+    this->defense = clamp(defense, 0, MAX_DEFENSE);
 }
 void Monster::setSpeed(int speed){
-    this->speed = speed;
+    this->speed = clamp(speed, 0, MAX_SPEED);
 }

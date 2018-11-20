@@ -1,0 +1,63 @@
+Regular Case
+
+Name: Hellcat
+Strength: 30
+Health: 10
+Defense: 20
+Speed: 5
+
+Name: Troll
+Strength: 50
+Health: 15
+Defense: 30
+Speed: 10
+
+Name: Kobold
+Strength: 10
+Health: 3
+Defense: 5
+Speed: 2
+
+Choose first monster for battle [0..2]:0
+Choose second monster for battle [0..2]:1
+
+Round 1
+--------
+        Hellcat attacks Troll with 29 power.
+        Troll has dodged the attack!
+
+Round 2
+--------
+        Troll attacks Hellcat with 35 power.
+        Hellcat took 28 and now has 0 health.
+        Hellcat has been defeated.
+
+
+
+Same Monster Case
+
+Name: Hellcat
+Strength: 30
+Health: 10
+Defense: 20
+Speed: 5
+
+Name: Troll
+Strength: 50
+Health: 15
+Defense: 30
+Speed: 10
+
+Name: Kobold
+Strength: 10
+Health: 3
+Defense: 5
+Speed: 2
+
+Choose first monster for battle [0..2]:1
+Choose second monster for battle [0..2]:1
+Please choose two monsters that are not the same.
+
+
+If in the text file a Statistic is provided that is outside of the bonds, the program successfully
+clamps it to the max or the min.

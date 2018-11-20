@@ -36,6 +36,11 @@ int main(){
     std::cout << "Choose second monster for battle [0.." << (count-1) << "]:";
     std::cin >> secondMonster;
 
+    if(firstMonster == secondMonster){
+        std::cout << "Please choose two monsters that are not the same.\n";
+        return 0;
+    }
+
     //Battle simulation
     int roundCounter = 1;
     while(monsters[firstMonster].getHealth() > 0 && monsters[secondMonster].getHealth() > 0){
