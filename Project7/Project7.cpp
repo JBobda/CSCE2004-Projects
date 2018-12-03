@@ -1,5 +1,5 @@
 //---------------------------------------------------
-// Purpose: To demonstrate use of three classes 
+// Purpose: To demonstrate use of three classes
 //          (Monster, Room, and Dungeon) in a simple
 //          text-based dungeons and dragons game.
 // Author:  Blake  Keeling
@@ -34,13 +34,13 @@ int main()
       // Read map.txt file
       string monster_name, room_name;
       int strength, health, defense, speed, north, south, east, west;
-      fin >> room_name >> north >> south >> east >> west 
+      fin >> room_name >> north >> south >> east >> west
           >> monster_name >> strength >> health >> defense >> speed;
 
       // Add monster and room to dungeon
       Monster monster(monster_name, strength, health, defense, speed);
-      //Room room(room_name, monster, north, south, east, west);
-      //dungeon.addRoom(room);
+      Room room(room_name, monster, north, south, east, west);
+      dungeon.addRoom(room);
    }
 
    // Close map.txt file
