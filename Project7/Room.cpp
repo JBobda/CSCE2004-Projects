@@ -1,7 +1,8 @@
 #include "Room.h"
-//Test Message
+
 using namespace std;
 
+//Default Constructor
 Room::Room(){
     name = "Default Room";
     north = -1;
@@ -9,6 +10,8 @@ Room::Room(){
     east = -1;
     west = -1;
 }
+
+//Primary Constructor
 Room::Room(string name, Monster monster, int north, int south, int east, int west){
     this->name = name;
     this->monster = monster;
@@ -17,6 +20,8 @@ Room::Room(string name, Monster monster, int north, int south, int east, int wes
     this->east = east;
     this->west = west;
 }
+
+//Copy Constructor
 Room::Room(const Room& room){
     this->name = room.name;
     this->monster = room.monster;
@@ -25,8 +30,11 @@ Room::Room(const Room& room){
     this->east = room.east;
     this->west = room.west;
 }
+
+//Destructor
 Room::~Room(){}
 
+//Look method that prints the room name and the monster's alive status
 void Room::Look(){
     cout << "You have entered the " << name << " Ember Tower." << endl;
 
@@ -45,6 +53,8 @@ void Room::Look(){
     if(west != -1)
         cout << "There is a room to the West" << endl;
 }
+
+//Move method that moves the player into a room chosen by the input, given that it is valid
 int Room::Move(int direction){
     char A = ' ';
     cout << "Choose a direction to move: ('n', 's', 'e', 'w'): " << endl;
@@ -71,6 +81,8 @@ int Room::Move(int direction){
     return direction;
 
 }
+
+//Checks if the monster inside the room
 bool Room::Alive(){
     if(monster.getHealth() > 0)
         return true;
@@ -78,6 +90,8 @@ bool Room::Alive(){
         return false;
 
 }
+
+//Fight method, the player attacks the monster, then the monster, if it is still alive, attacks back
 void Room::Fight(Monster& monster){
     if(!Alive())
         cout << "No reason to attack If the " << this->monster.getName() << " is already dead";
@@ -88,6 +102,8 @@ void Room::Fight(Monster& monster){
         this->monster.attack(monster);
 
 }
+
+//Cleans the program of any rooms that should not exist
 void Room::Clean(int clean){
     if( north >= clean)
         north = -1;

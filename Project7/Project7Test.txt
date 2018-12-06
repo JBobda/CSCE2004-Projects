@@ -1,0 +1,100 @@
+--------------------------------------------------------------------------------------------------
+
+Default Test Case:
+
+--------------------------------------------------------------------------------------------------
+
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Foyer Ember Tower.
+A vicious-looking Hellcat is lurking in the shadows.
+There is a room to the North
+Choose an action: ('attack', 'move', 'look', 'quit'):attack
+
+        The Player attacks Hellcat with 5 power.
+        Hellcat dodged the attack!
+        Hellcat attacks The Player with 26 power.
+        The Player dodged the attack!
+Choose an action: ('attack', 'move', 'look', 'quit'):attack
+
+        The Player attacks Hellcat with 17 power.
+        Hellcat took 13 damage and now has 0 health.
+        Hellcat has been defeated.
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Foyer Ember Tower.
+The remains of the Hellcat are right where you left them.
+There is a room to the North
+Choose an action: ('attack', 'move', 'look', 'quit'):move
+
+Choose a direction to move: ('n', 's', 'e', 'w'):
+n
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Central_Hall Ember Tower.
+A vicious-looking Kobold is lurking in the shadows.
+There is a room to the South
+There is a room to the East
+There is a room to the West
+Choose an action: ('attack', 'move', 'look', 'quit'):quit
+
+
+        You manage to escape, hopefully another brave adventurer will defeat the boss.
+
+--------------------------------------------------------------------------------------------------
+
+Invalid input Test Case (General Menu):
+
+--------------------------------------------------------------------------------------------------
+
+Choose an action: ('attack', 'move', 'look', 'quit'):ls
+Choose an action: ('attack', 'move', 'look', 'quit'):ls
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Foyer Ember Tower.
+A vicious-looking Hellcat is lurking in the shadows.
+There is a room to the North
+Choose an action: ('attack', 'move', 'look', 'quit'):ls
+Choose an action: ('attack', 'move', 'look', 'quit'):attack
+
+        The Player attacks Hellcat with 30 power.
+        Hellcat took 24 damage and now has 0 health.
+        Hellcat has been defeated.
+Choose an action: ('attack', 'move', 'look', 'quit'):quit
+
+
+        You manage to escape, hopefully another brave adventurer will defeat the boss.
+
+
+--------------------------------------------------------------------------------------------------
+
+Invalid input Test Case (Move Menu):
+
+--------------------------------------------------------------------------------------------------
+
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Foyer Ember Tower.
+A vicious-looking Hellcat is lurking in the shadows.
+There is a room to the North
+Choose an action: ('attack', 'move', 'look', 'quit'):move
+
+Choose a direction to move: ('n', 's', 'e', 'w'):
+a
+q
+r
+t
+y
+u
+n
+Choose an action: ('attack', 'move', 'look', 'quit'):look
+
+You have entered the Central_Hall Ember Tower.
+A vicious-looking Kobold is lurking in the shadows.
+There is a room to the South
+There is a room to the East
+There is a room to the West
+Choose an action: ('attack', 'move', 'look', 'quit'):quit
+
+
+        You manage to escape, hopefully another brave adventurer will defeat the boss.
